@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="9.3000097cm"
+   height="8.8399897cm"
+   viewBox="0 0 93.000103 88.399907"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="white-email.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="cm"
+     height="8.83999cm"
+     width="9.30001cm"
+     inkscape:zoom="0.49887767"
+     inkscape:cx="395.88864"
+     inkscape:cy="367.82565"
+     inkscape:window-width="1287"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1392" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:#ffffff"
+       id="g1390"
+       transform="matrix(1.1926149,0,0,1.1926149,1.2988093,-0.8787301)">
+      <g
+         id="g1381"
+         style="fill:#ffffff">
+		<path
+   d="M 66.097,12.089 H 9.197 C 4.126,12.089 0,16.215 0,21.286 v 32.722 c 0,5.071 4.126,9.197 9.197,9.197 h 56.9 c 5.071,0 9.197,-4.126 9.197,-9.197 V 21.287 c 0.001,-5.072 -4.125,-9.198 -9.197,-9.198 z m -4.494,6 L 37.647,33.523 13.691,18.089 Z m 4.494,39.117 H 9.197 C 7.434,57.206 6,55.771 6,54.009 V 21.457 l 29.796,19.16 c 0.04,0.025 0.083,0.042 0.124,0.065 0.043,0.024 0.087,0.047 0.131,0.069 0.231,0.119 0.469,0.215 0.712,0.278 0.025,0.007 0.05,0.01 0.075,0.016 0.267,0.063 0.537,0.102 0.807,0.102 10e-4,0 0.002,0 0.002,0 0.002,0 0.003,0 0.004,0 0.27,0 0.54,-0.038 0.807,-0.102 0.025,-0.006 0.05,-0.009 0.075,-0.016 0.243,-0.063 0.48,-0.159 0.712,-0.278 0.044,-0.022 0.088,-0.045 0.131,-0.069 0.041,-0.023 0.084,-0.04 0.124,-0.065 l 29.796,-19.16 v 32.551 c -0.001,1.763 -1.436,3.198 -3.199,3.198 z"
+   id="path1379"
+   style="fill:#ffffff" />
+
+	</g>
+    </g>
+  </g>
+</svg>

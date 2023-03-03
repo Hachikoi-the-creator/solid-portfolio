@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+.nav-ul {
+  z-index: 10;
+  margin: 0;
+  position: fixed;
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+
+  padding: 1rem;
+  border-radius: 0 0 0 2rem;
+  background-image: linear-gradient(
+    50deg,
+    rgb(40, 32, 160) 0%,
+    rgb(112, 7, 98) 100%
+  );
+}
+
+.icon {
+  cursor: pointer;
+  list-style: none;
+}
+
+.icon-link {
+  display: inline-block;
+  padding: 0.4rem;
+}
+
+.icon-img {
+  width: 2rem;
+}
+
+.icon-img-hover {
+  width: 2rem;
+  height: 2rem;
+  background: url("../assets/up-arrow.png");
+
+  &:hover {
+    width: 3rem;
+    background: url("../assets/white-koi-kanji.svg");
+  }
+}
+
+// < 600px
+@media (max-width: 600px) {
+  .nav {
+    .icon-img {
+      width: 3rem;
+    }
+    .nav-ul {
+      position: relative;
+      flex-direction: row;
+      border-radius: 0 0 2rem 2rem;
+
+      & .icon:first-child {
+        margin-right: auto;
+      }
+    }
+  }
+}
