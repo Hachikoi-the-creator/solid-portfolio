@@ -9,15 +9,14 @@
     "serve": "vite preview"
   },
   "license": "MIT",
+  "dependencies": {
+    "@motionone/solid": "^10.15.5",
+    "sass": "^1.58.3",
+    "solid-js": "^1.6.10"
+  },
   "devDependencies": {
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
     "vite-plugin-solid": "^2.5.0"
-  },
-  "dependencies": {
-    "@motionone/solid": "^10.15.5",
-    "@solid-primitives/intersection-observer": "^2.0.8",
-    "sass": "^1.58.3",
-    "solid-js": "^1.6.10"
   }
 }
