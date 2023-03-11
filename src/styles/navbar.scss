@@ -1,22 +1,32 @@
 @import "./variables.scss";
 
-.nav-ul {
+.navbar {
   z-index: 10;
-  margin: 0;
   position: fixed;
-  display: flex;
-  gap: 0.3rem;
-  flex-direction: column;
   top: 0;
+  left: 0;
   right: 0;
+  gap: 0.3rem;
+}
 
-  padding: 1rem;
-  border-radius: 0 0 0 2rem;
+.nav-ul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  // padding: 0.2rem;
+  border-radius: 0 0 2rem 2rem;
   background-image: linear-gradient(
     50deg,
     rgb(40, 32, 160) 0%,
     rgb(112, 7, 98) 100%
   );
+}
+@media (max-width: 800px) {
+  .nav-ul {
+    left: 34vw;
+  }
 }
 
 .icon {

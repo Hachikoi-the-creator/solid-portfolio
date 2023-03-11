@@ -1,0 +1,48 @@
+@import "./variables.scss";
+
+$container-bg: rgba(221, 160, 221, 0.2);
+
+.about-me {
+  width: 85%;
+  margin: 0 auto;
+  background-color: $container-bg;
+  border-radius: 1rem;
+
+  .gradient-subtitle {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me {
+    padding: 0;
+
+    &::after {
+      top: 6.5rem;
+    }
+  }
+}
+
+.content {
+  padding-bottom: 1rem;
+
+  p {
+    margin-bottom: 1.3rem;
+    border-radius: 0.4rem;
+    padding: 0 2rem 0 0.2rem;
+    margin-left: 2rem;
+    transition: transform 300ms ease-in-out;
+    transition: all 600ms ease-in-out;
+    border-left: 3px solid $link;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    padding-top: 2rem;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

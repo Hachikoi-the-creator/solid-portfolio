@@ -1,24 +1,22 @@
 import { Component } from "solid-js";
-import styles from "../styles/hero.module.scss";
+import "../styles/hero.scss";
 
 const Hero: Component = () => {
   return (
-    <div class={styles["hero"]} id="hero">
-      <div class={styles["opacity-container"]}>
-        <p class={styles["intro"]}>Hi, My Name Is:</p>
-        <p class={styles["name"]}>Adan Moreno</p>
+    <div class={"hero"} id="hero">
+      <div class={"opacity-container"}>
+        <p class={"intro"}>Hi, My Name Is:</p>
+        <p class={"name"}>Adan Moreno</p>
       </div>
 
-      <div class={styles["wrap-container"]}>
-        <p class={styles["charge"]}>Full Stack</p>
-        <p class={styles["charge"]}>Web Dev</p>
+      <div class={"wrap-container"}>
+        <p class={"charge"}>Full Stack</p>
+        <p class={"charge"}>Web Dev</p>
       </div>
 
-      <div class={styles["likes"]}>
-        I like to build cool apps that have a purpose
-      </div>
+      <div class={"likes"}>I like to build cool apps that have a purpose</div>
 
-      <div class={styles["buttons"]}>
+      <div class={"buttons"}>
         <a
           class={"gradient-btn"}
           href="https://www.linkedin.com/in/adan-moreno7/"

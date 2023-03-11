@@ -14,7 +14,6 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   // *BRUH WTF
-  font-size: 17px;
   line-height: 24px;
   font-weight: 400;
 
@@ -30,16 +29,16 @@
 
 @media (max-width: 500px) {
   :root {
-    font-size: 55%;
+    font-size: 85%;
   }
 }
 
-:root,
-body,
-#root {
-  min-width: 100vw;
-  overflow-x: hidden;
-}
+// :root,
+// body,
+// #root {
+// min-width: 100vw;
+// overflow-x: hidden;
+// }
 
 // * General
 a {
@@ -108,6 +107,11 @@ a {
     text-decoration: underline;
     cursor: pointer;
   }
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 // scrollbar

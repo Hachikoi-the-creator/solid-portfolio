@@ -9,8 +9,8 @@
 }
 
 .wrapper {
-  width: 80%;
-  margin: 2rem 10%;
+  width: 85%;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +21,5 @@
 .project {
   width: 100%;
   padding: 1rem;
-  border: 1px solid fuchsia;
   text-align: center;
 }
