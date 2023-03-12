@@ -3,13 +3,13 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import ProjectsContainer from "./components/ProjectsContainer";
+import TestSnow from "./components/TestSnow";
 
 const App: Component = () => {
-  const [color, setColor] = createSignal("purple");
-
   return (
     <>
       <Navbar />
+      {/* <TestSnow/> */}
       <Hero />
       <AboutMe />
       <ProjectsContainer />

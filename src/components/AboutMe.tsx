@@ -6,19 +6,15 @@ export default function AboutMe() {
     threshold: 0.5,
   });
 
-  const handleObserver = (event) => {
-    const className = "appear";
-    if (event.isIntersecting) {
-      event.target.classList.add(className);
-    } else {
-      event.target.classList.remove(className);
-    }
-    console.log(
-      "intersecting",
-      event.isIntersecting,
-      "has class",
-      event.target.classList.contains(className)
-    );
+  const handleObserver = (event:IntersectionObserverEntry) => {
+    if (event.isIntersecting) 
+      event.target.classList.add("appear");
+    // console.log(
+    //   "intersecting",
+    //   event.isIntersecting,
+    //   "has class",
+    //   event.target.classList.contains(className)
+    // );
   };
 
   return (
