@@ -1,14 +1,9 @@
+import "../styles/navbar.scss";
 import { Component, createSignal } from "solid-js";
 import laptopCode from "../assets/white-laptop-code.svg";
 import emailSvg from "../assets/white-email.svg";
 import arrowUp from "../assets/up-arrow.png";
 
-import "../styles/navbar.scss";
-
-type ImageEvent = MouseEvent & {
-  currentTarget: HTMLImageElement;
-  target: Element;
-};
 
 const Navbar: Component = () => {
   return (

@@ -1,9 +1,16 @@
-import { Component } from "solid-js";
+import { Component} from "solid-js";
 import "../styles/hero.scss";
+import { Motion } from "@motionone/solid"
 
 const Hero: Component = () => {
+
   return (
-    <div class={"hero"} id="hero">
+    <Motion.div animate={{ opacity: [0, 1], scale: [0.3, 1] }}
+      transition={{
+        duration: 1, easing: "ease-in-out"
+      }}
+      class={"hero"} id="hero"
+    >
       <div class={"opacity-container"}>
         <p class={"intro"}>Hi, My Name Is:</p>
         <p class={"name"}>Adan Moreno</p>
@@ -23,11 +30,11 @@ const Hero: Component = () => {
         >
           LinkedIn
         </a>
-        <a class={"gradient-btn"} href="https://twitter.com/8koi2">
-          Twitter
+        <a class={"gradient-btn"} href="https://github.com/hachikoi-the-creator">
+          Github
         </a>
       </div>
-    </div>
+    </Motion.div >
   );
 };
 

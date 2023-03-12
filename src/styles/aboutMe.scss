@@ -2,6 +2,15 @@
 
 $container-bg: rgba(221, 160, 221, 0.2);
 
+@keyframes JelloAni {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .about-me {
   width: 85%;
   margin: 0 auto;
@@ -33,7 +42,20 @@ $container-bg: rgba(221, 160, 221, 0.2);
     margin-left: 2rem;
     transition: transform 300ms ease-in-out;
     transition: all 600ms ease-in-out;
+  }
+
+  p.fade-in {
+    color: transparent;
+    border: none;
+    transform: scale(0);
+    transform: translatex(100px);
+  }
+
+  p.fade-in.appear {
+    color: inherit;
     border-left: 3px solid $link;
+    transform: scale(1);
+    transform: translateX(0);
   }
 }
 
@@ -46,3 +68,4 @@ $container-bg: rgba(221, 160, 221, 0.2);
     }
   }
 }
+

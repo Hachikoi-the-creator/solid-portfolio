@@ -6,7 +6,6 @@
   top: 0;
   left: 0;
   right: 0;
-  gap: 0.3rem;
 }
 
 .nav-ul {
@@ -15,7 +14,6 @@
   justify-content: center;
   align-items: center;
   width: 80vw;
-  // padding: 0.2rem;
   border-radius: 0 0 2rem 2rem;
   background-image: linear-gradient(
     50deg,
@@ -23,9 +21,10 @@
     rgb(112, 7, 98) 100%
   );
 }
+
 @media (max-width: 800px) {
   .nav-ul {
-    left: 34vw;
+    // left: 34vw;
   }
 }
 
