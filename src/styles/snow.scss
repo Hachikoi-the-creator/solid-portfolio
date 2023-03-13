@@ -1,14 +1,13 @@
 $bubble-one: red;
-$bubble-one-trans: rgba(255,0,0,4);
+$bubble-one-trans: rgba(255, 0, 0, 4);
 
 $bubble-tree: green;
-$bubble-tree-trans: rgba(0,255,0,4);
+$bubble-tree-trans: rgba(0, 255, 0, 4);
 
 $bubble-two: blue;
-$bubble-two-trans: rgba(0,0,255,4);
+$bubble-two-trans: rgba(0, 0, 255, 4);
 
-
-.container{
+.container {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -16,45 +15,47 @@ $bubble-two-trans: rgba(0,0,255,4);
   overflow: hidden;
 }
 
-.bubbles-wrapper{
+.bubbles-wrapper {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
-.bubble{
+.bubble {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
   animation: bubble-up 15s linear infinite;
-  animation-duration: calc(153s /var(--delaySec)); 
+  animation-duration: calc(153s / var(--delaySec));
 }
 
 // 1, 4, 7
 .bubbles-wrapper .bubble:nth-child(3n-2) {
   background-color: $bubble-one;
-  box-shadow: 0 0 10px $bubble-one-trans, 0 0 50px $bubble-one, 0 0 100px $bubble-one;
+  box-shadow: 0 0 10px $bubble-one-trans, 0 0 50px $bubble-one,
+    0 0 100px $bubble-one;
 }
 
 //2,5,8
 .bubbles-wrapper .bubble:nth-child(3n-1) {
   background-color: $bubble-two;
-  box-shadow: 0 0 10px $bubble-two-trans, 0 0 50px $bubble-two, 0 0 100px $bubble-two;
+  box-shadow: 0 0 10px $bubble-two-trans, 0 0 50px $bubble-two,
+    0 0 100px $bubble-two;
 }
 
 //3,6,9
-.bubbles-wrapper .bubble:nth-child(3n+0) {
+.bubbles-wrapper .bubble:nth-child(3n + 0) {
   background-color: $bubble-tree;
-  box-shadow: 0 0 10px $bubble-tree-trans, 0 0 50px $bubble-tree, 0 0 100px $bubble-tree;
+  box-shadow: 0 0 10px $bubble-tree-trans, 0 0 50px $bubble-tree,
+    0 0 100px $bubble-tree;
 }
 
-
-@keyframes bubble-up{
-  from{
-    transform: translateY(100vh) scale(.3);
+@keyframes bubble-up {
+  from {
+    transform: translateY(100vh) scale(0.3);
   }
-  to{
+  to {
     transform: translateY(-100vh) scale(1.2);
   }
 }

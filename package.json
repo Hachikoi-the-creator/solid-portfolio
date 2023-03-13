@@ -6,7 +6,8 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "pretty": "prettier --write src/"
   },
   "license": "MIT",
   "dependencies": {
@@ -16,6 +17,7 @@
     "solid-js": "^1.6.10"
   },
   "devDependencies": {
+    "prettier": "2.8.4",
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
     "vite-plugin-solid": "^2.5.0"

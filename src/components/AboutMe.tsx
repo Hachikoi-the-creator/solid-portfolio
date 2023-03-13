@@ -6,9 +6,8 @@ export default function AboutMe() {
     threshold: 0.5,
   });
 
-  const handleObserver = (event:IntersectionObserverEntry) => {
-    if (event.isIntersecting) 
-      event.target.classList.add("appear");
+  const handleObserver = (event: IntersectionObserverEntry) => {
+    if (event.isIntersecting) event.target.classList.add("appear");
     // console.log(
     //   "intersecting",
     //   event.isIntersecting,
@@ -20,8 +19,8 @@ export default function AboutMe() {
   return (
     <section class="about-me">
       <h2 class="gradient-subtitle">About Me</h2>
-      <div class="content">
-        <p use:intersectionObserver={e=>handleObserver(e)} class="fade-in">
+      <div class="content ">
+        <p use:intersectionObserver={(e) => handleObserver(e)} class="fade-in">
           Hi there! My name is Alice, and I am a web developer with a passion
           for creating beautiful and functional websites. I have a strong
           foundation in HTML, CSS, JavaScript, React, Redux & SASS and I am

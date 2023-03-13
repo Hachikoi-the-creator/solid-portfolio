@@ -4,7 +4,6 @@ import laptopCode from "../assets/white-laptop-code.svg";
 import emailSvg from "../assets/white-email.svg";
 import arrowUp from "../assets/up-arrow.png";
 
-
 const Navbar: Component = () => {
   return (
     <nav class="navbar">

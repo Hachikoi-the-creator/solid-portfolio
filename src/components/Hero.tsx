@@ -1,15 +1,18 @@
-import { Component} from "solid-js";
+import { Component } from "solid-js";
 import "../styles/hero.scss";
-import { Motion } from "@motionone/solid"
+import { Motion } from "@motionone/solid";
+import Button from "./atoms/Button";
 
 const Hero: Component = () => {
-
   return (
-    <Motion.div animate={{ opacity: [0, 1], scale: [0.3, 1] }}
+    <Motion.div
+      animate={{ opacity: [0, 1], scale: [0.3, 1] }}
       transition={{
-        duration: 1, easing: "ease-in-out"
+        duration: 1,
+        easing: "ease-in-out",
       }}
-      class={"hero"} id="hero"
+      class={"hero"}
+      id="hero"
     >
       <div class={"opacity-container"}>
         <p class={"intro"}>Hi, My Name Is:</p>
@@ -24,17 +27,18 @@ const Hero: Component = () => {
       <div class={"likes"}>I like to build cool apps that have a purpose</div>
 
       <div class={"buttons"}>
-        <a
-          class={"gradient-btn"}
-          href="https://www.linkedin.com/in/adan-moreno7/"
-        >
-          LinkedIn
-        </a>
-        <a class={"gradient-btn"} href="https://github.com/hachikoi-the-creator">
-          Github
-        </a>
+        <Button
+          text="LinkedIn"
+          url="https://www.linkedin.com/in/adan-moreno7/"
+          isExternal={false}
+        />
+        <Button
+          text="Github"
+          url="https://github.com/hachikoi-the-creator"
+          isExternal={false}
+        />
       </div>
-    </Motion.div >
+    </Motion.div>
   );
 };
 
