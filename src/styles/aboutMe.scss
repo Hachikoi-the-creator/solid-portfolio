@@ -2,21 +2,11 @@
 
 $container-bg: rgba(221, 160, 221, 0.2);
 
-// Div ---------- ---------------- --------------
-@keyframes JelloAni {
-  0% {
-    transform: scale(0.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .about-me {
   width: 85%;
   margin: 0 auto;
-  background-color: $container-bg;
-  border-radius: 1rem;
+  // background-color: $container-bg;
+  // border-radius: 1rem;
 
   .gradient-subtitle {
     margin-bottom: 2rem;

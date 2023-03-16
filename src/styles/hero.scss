@@ -2,15 +2,29 @@
 
 .hero {
   margin: 3rem;
-  min-height: 2rem;
   text-align: center;
   font-size: 2em;
+  padding-block: 7rem;
+  transition-property: all;
+  transition-duration: 3s;
+  transition-delay: 10s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  .hidden {
+    opacity: 0.1;
+    scale: 0.2;
+  }
+
+  .visible {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 .intro,
 .name,
 .charge {
-  padding: 1rem;
+  padding: 1.2rem;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

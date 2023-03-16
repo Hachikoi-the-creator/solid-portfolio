@@ -17,14 +17,14 @@ export default function AboutMe() {
   };
 
   return (
-    <section class="about-me">
+    <section class="about-me glassy">
       <h2 class="gradient-subtitle">About Me</h2>
       <div class="content ">
         <p use:intersectionObserver={(e) => handleObserver(e)} class="fade-in">
-          Hi there! My name is Alice, and I am a web developer with a passion
-          for creating beautiful and functional websites. I have a strong
-          foundation in HTML, CSS, JavaScript, React, Redux & SASS and I am
-          always learning and exploring new technologies to enhance my skills.
+          Hi there! My name is Adan, and I am a web developer with a passion for
+          creating beautiful and functional websites. I have a strong foundation
+          in HTML, CSS, JavaScript, React, Redux & SASS and I am always learning
+          and exploring new technologies to enhance my skills.
         </p>
         <p use:intersectionObserver={handleObserver} class="fade-in">
           I started my journey by teachig myself how to code whit Python anfe

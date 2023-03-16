@@ -2,27 +2,16 @@ import { Component, createSignal, Index } from "solid-js";
 import "../styles/snow.scss";
 
 const TestSnow: Component = () => {
-  // // console.log(delaysArray);
-  // const [rndDelaysArray, setRndDelaysArray] = createSignal(delaysArray)
-
-  // return (<div class="container">
-  //   <div class="bubbles-wrapper">
-  //     <Index each={rndDelaysArray()}>{(rndNum, i) =>
-  //       <span class="bubble" style={`--i-${rndNum()}`}></span>
-  //     }      </Index>
-  //   </div>
-  // </div>)
   // End up being better to write it "by hand" to ensure good spread
-  const [cats, setCats] = createSignal([
-    14, 10, 24, 26, 22, 21, 33, 28, 20, 10, 25, 29, 13, 8, 24, 32, 14, 27, 13,
-    34, 16, 12, 23, 9, 33, 27, 19, 35, 14, 10, 24, 26, 22, 21, 33, 28, 20, 10,
-    25, 29, 13, 8, 24, 32, 14, 27, 13, 34, 16, 12, 23, 9, 33, 27, 1,
+  const [rndArr, setRndArr] = createSignal([
+    4, 6, 2, 9, 5, 4, 2, 5, 7, 5, 9, 2, 8, 6, 3, 9, 1, 5, 3, 5, 8, 9, 2, 6, 3,
+    4, 7, 1, 3, 9,
   ]);
 
   return (
     <div class="container">
       <div class="bubbles-wrapper">
-        <Index each={cats()}>
+        <Index each={rndArr()}>
           {(rndDelay) => (
             <div class="bubble" style={{ "--delaySec": rndDelay() }}></div>
           )}

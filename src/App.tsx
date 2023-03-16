@@ -4,14 +4,12 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import ProjectsContainer from "./components/ProjectsContainer";
 import TestSnow from "./components/TestSnow";
-import GlassTest from "./components/GlassText";
 
 const App: Component = () => {
   return (
     <>
       <Navbar />
-      {/* <TestSnow/> */}
-      <GlassTest />
+      {/* <TestSnow /> */}
       <Hero />
       <AboutMe />
       <ProjectsContainer />
