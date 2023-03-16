@@ -1,26 +1,38 @@
 import "../styles/project.scss";
 import { Component, createSignal, For } from "solid-js";
 import { ProjectT } from "../assets/projectsData";
+import { createViewportObserver } from "@solid-primitives/intersection-observer";
 
 const Project: Component<ProjectT> = (props) => {
   const { imgUrl, title, desc, liveLink, codeLink, techStack, rowReverse } =
     props;
 
-  const [isHover, setIsHover] = createSignal({
-    live: false,
-    code: false,
-  });
+  // const [isHover, setIsHover] = createSignal({
+  //   live: false,
+  //   code: false,
+  // });
 
   // depending on the key, set the value of the key to the opposite of its current value
-  const handleHover = (e: MouseEvent, key: "live" | "code") => {
-    setIsHover({ ...isHover(), [key]: !isHover()[key] });
+  // const handleHover = (e: MouseEvent, key: "live" | "code") => {
+  //   setIsHover({ ...isHover(), [key]: !isHover()[key] });
+  // };
+
+  const [intersectionObserver] = createViewportObserver([], {
+    threshold: 0.5,
+  });
+
+  const handleObserver = (event: IntersectionObserverEntry) => {
+    if (event.isIntersecting) event.target.classList.add("appear");
   };
 
   return (
     <div
       class={`project-container ${rowReverse ? "row-reverse" : "row-normal"}`}
     >
-      <div class="desc-section">
+      <div
+        use:intersectionObserver={handleObserver}
+        class="desc-section fade-in"
+      >
         <h3 class="project-title">{title}</h3>
         <p class="desc">{desc}</p>
 
@@ -60,7 +72,11 @@ const Project: Component<ProjectT> = (props) => {
         </div>
       </div>
 
-      <a href={liveLink} class="thumbnail-wrapper">
+      <a
+        use:intersectionObserver={handleObserver}
+        href={liveLink}
+        class="thumbnail-wrapper fade-in"
+      >
         <img src={imgUrl} alt={`preview of ${title}`} class="thumbnail" />
       </a>
     </div>

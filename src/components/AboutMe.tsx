@@ -20,7 +20,7 @@ export default function AboutMe() {
     <section class="about-me glassy">
       <h2 class="gradient-subtitle">About Me</h2>
       <div class="content ">
-        <p use:intersectionObserver={(e) => handleObserver(e)} class="fade-in">
+        <p use:intersectionObserver={handleObserver} class="fade-in">
           Hi there! My name is Adan, and I am a web developer with a passion for
           creating beautiful and functional websites. I have a strong foundation
           in HTML, CSS, JavaScript, React, Redux & SASS and I am always learning
