@@ -4,20 +4,16 @@
   margin: 3rem;
   text-align: center;
   font-size: 2em;
-  padding-block: 7rem;
-  transition-property: all;
-  transition-duration: 3s;
-  transition-delay: 10s;
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-around;
 
-  .hidden {
-    opacity: 0.1;
-    scale: 0.2;
-  }
+  .inner-wrapper {
+    padding-block: 2rem;
 
-  .visible {
-    opacity: 1;
-    scale: 1;
+    > div {
+      padding-block: 1rem;
+    }
   }
 }
 

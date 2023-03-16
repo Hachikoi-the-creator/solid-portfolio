@@ -14,29 +14,31 @@ const Hero: Component = () => {
       class={"hero"}
       id="hero"
     >
-      <div class="opacity-container">
-        <p class="intro">Hi, My Name Is:</p>
-        <p class="name">Adan Moreno</p>
-      </div>
+      <div class="inner-wrapper">
+        <div class="opacity-container">
+          <p class="intro">Hi, My Name Is:</p>
+          <p class="name">Adan Moreno</p>
+        </div>
 
-      <div class="wrap-container">
-        <p class="charge">Full Stack</p>
-        <p class="charge">Web Dev</p>
-      </div>
+        <div class="wrap-container">
+          <p class="charge">Full Stack</p>
+          <p class="charge">Web Dev</p>
+        </div>
 
-      <div class="likes">I like to build cool apps that have a purpose</div>
+        <div class="likes">I like to build cool apps that have a purpose</div>
 
-      <div class="buttons">
-        <Button
-          text="LinkedIn"
-          url="https://www.linkedin.com/in/adan-moreno7/"
-          isExternal={false}
-        />
-        <Button
-          text="Github"
-          url="https://github.com/hachikoi-the-creator"
-          isExternal={false}
-        />
+        <div class="buttons">
+          <Button
+            text="LinkedIn"
+            url="https://www.linkedin.com/in/adan-moreno7/"
+            isExternal={false}
+          />
+          <Button
+            text="Github"
+            url="https://github.com/hachikoi-the-creator"
+            isExternal={false}
+          />
+        </div>
       </div>
     </Motion.div>
   );

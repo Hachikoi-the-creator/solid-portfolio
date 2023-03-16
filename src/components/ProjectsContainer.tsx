@@ -16,11 +16,11 @@ const ProjectsContainer: Component = () => {
   };
 
   return (
-    <div class={"main-container"} id="projects">
-      <div class={"title-wrapper"}>
-        <h2 class={"gradient-subtitle"}>Projects</h2>
+    <div class="main-container" id="projects">
+      <div class="title-wrapper">
+        <h2 class="gradient-subtitle">Projects</h2>
       </div>
-      <div class={"wrapper"}>
+      <div class="wrapper">
         <For each={projectsData}>{(project) => cleanerReturns(project)}</For>
       </div>
     </div>
