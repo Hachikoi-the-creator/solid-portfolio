@@ -11,7 +11,7 @@ const Hero: Component = () => {
         duration: 1,
         easing: "ease-in-out",
       }}
-      class={"hero"}
+      class="hero"
       id="hero"
     >
       <div class="inner-wrapper">

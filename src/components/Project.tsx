@@ -1,21 +1,11 @@
 import "../styles/project.scss";
-import { Component, createSignal, For } from "solid-js";
+import { Component, For } from "solid-js";
 import { ProjectT } from "../assets/projectsData";
 import { createViewportObserver } from "@solid-primitives/intersection-observer";
 
 const Project: Component<ProjectT> = (props) => {
   const { imgUrl, title, desc, liveLink, codeLink, techStack, rowReverse } =
     props;
-
-  // const [isHover, setIsHover] = createSignal({
-  //   live: false,
-  //   code: false,
-  // });
-
-  // depending on the key, set the value of the key to the opposite of its current value
-  // const handleHover = (e: MouseEvent, key: "live" | "code") => {
-  //   setIsHover({ ...isHover(), [key]: !isHover()[key] });
-  // };
 
   const [intersectionObserver] = createViewportObserver([], {
     threshold: 0.5,

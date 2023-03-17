@@ -1,8 +1,8 @@
 import "../styles/navbar.scss";
-import { Component, createSignal } from "solid-js";
+import { Component } from "solid-js";
 import laptopCode from "../assets/white-laptop-code.svg";
 import emailSvg from "../assets/white-email.svg";
-import arrowUp from "../assets/up-arrow.png";
+import purpleHome from "../assets/pur-home.svg";
 
 const Navbar: Component = () => {
   return (
@@ -11,7 +11,8 @@ const Navbar: Component = () => {
         {/* hero */}
         <li class="icon">
           <a class="icon-link" href="#hero">
-            <img src={arrowUp} alt="goto home" class="icon-img" />
+            <img src={purpleHome} alt="goto home" class="icon-img" />
+            <p class="icon-text">Home</p>
           </a>
         </li>
 
@@ -19,6 +20,7 @@ const Navbar: Component = () => {
         <li class="icon">
           <a href="#projects" class="icon-link">
             <img src={laptopCode} alt={"name"} class="icon-img" />
+            <p class="icon-text">Projects</p>
           </a>
         </li>
 
@@ -29,6 +31,7 @@ const Navbar: Component = () => {
             class="icon-link"
           >
             <img src={emailSvg} alt={"name"} class="icon-img" />
+            <p class="icon-text">Email</p>
           </a>
         </li>
       </ul>

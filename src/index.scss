@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+// for navbar covering content
+.p-top {
+  padding-top: 5rem;
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   // *BRUH WTF
@@ -37,6 +42,7 @@
 body {
   min-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 // * General

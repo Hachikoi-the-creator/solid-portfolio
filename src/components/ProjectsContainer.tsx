@@ -16,7 +16,7 @@ const ProjectsContainer: Component = () => {
   };
 
   return (
-    <div class="main-container" id="projects">
+    <div class="main-container p-top" id="projects">
       <div class="title-wrapper">
         <h2 class="gradient-subtitle">Projects</h2>
       </div>
