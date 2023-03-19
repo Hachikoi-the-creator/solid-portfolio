@@ -17,7 +17,7 @@ const Project: Component<ProjectT> = (props) => {
   };
 
   return (
-    <div
+    <article
       class={`project-container ${rowReverse ? "row-reverse" : "row-normal"}`}
     >
       <div
@@ -56,7 +56,7 @@ const Project: Component<ProjectT> = (props) => {
       >
         <img src={imgUrl} alt={`preview of ${title}`} class="thumbnail" />
       </a>
-    </div>
+    </article>
   );
 };
 

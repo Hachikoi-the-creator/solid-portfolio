@@ -1,29 +1,30 @@
 import "../styles/projectsContainer.scss";
 import { Component, For } from "solid-js";
-import projectsData, { ProjectT } from "../assets/projectsData";
+import projectsData from "../assets/projectsData";
 import Project from "./Project";
 
 const ProjectsContainer: Component = () => {
-  const cleanerReturns = (projectsData: ProjectT) => {
-    const { imgUrl, title, desc, liveLink, codeLink, techStack, rowReverse } =
-      projectsData;
-
-    return (
-      <Project
-        {...{ title, imgUrl, desc, liveLink, codeLink, techStack, rowReverse }}
-      />
-    );
-  };
-
   return (
-    <div class="main-container p-top" id="projects">
+    <section class="main-container p-top" id="projects">
       <div class="title-wrapper">
         <h2 class="gradient-subtitle">Projects</h2>
       </div>
       <div class="wrapper">
-        <For each={projectsData}>{(project) => cleanerReturns(project)}</For>
+        <For each={projectsData}>
+          {(project) => (
+            <Project
+              title={project.title}
+              imgUrl={project.imgUrl}
+              desc={project.desc}
+              liveLink={project.liveLink}
+              codeLink={project.codeLink}
+              techStack={project.techStack}
+              rowReverse={project.rowReverse}
+            />
+          )}
+        </For>
       </div>
-    </div>
+    </section>
   );
 };
 

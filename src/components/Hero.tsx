@@ -37,16 +37,7 @@ const Hero: Component = () => {
         </article>
 
         <div class="buttons">
-          <GlowButton
-            text="LinkedIn"
-            url="https://www.linkedin.com/in/adan-moreno7/"
-            isExternal={false}
-          />
-          <GlowButton
-            text="Github"
-            url="https://github.com/hachikoi-the-creator"
-            isExternal={false}
-          />
+          <GlowButton text="Contact Me" url="#contact-me" isExternal={false} />
         </div>
       </div>
     </Motion.div>

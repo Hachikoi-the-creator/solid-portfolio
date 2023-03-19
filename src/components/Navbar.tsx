@@ -1,18 +1,40 @@
 import "../styles/navbar.scss";
-import { Component } from "solid-js";
+import { Component, createSignal } from "solid-js";
 import laptopCode from "../assets/white-laptop-code.svg";
-import emailSvg from "../assets/white-email.svg";
 import purpleHome from "../assets/pur-home.svg";
 
 const Navbar: Component = () => {
+  const [isBurgerOpen, setIsBurgerOpen] = createSignal(false);
+
   return (
     <nav class="navbar">
-      <ul class="nav-ul">
-        {/* hero */}
+      <button
+        class={`burger ${isBurgerOpen() ? "burger-open" : "burger-closed"}`}
+        onClick={() => setIsBurgerOpen((prev) => !prev)}
+      >
+        <div />
+        <div />
+        <div />
+      </button>
+
+      <ul class={`nav-ul ${isBurgerOpen() ? "nav-open" : "nav-closed"}`}>
+        {/* home */}
         <li class="icon">
-          <a class="icon-link" href="#hero">
+          <a
+            class="icon-link"
+            href="#hero"
+            onclick={() => setIsBurgerOpen(false)}
+          >
             <img src={purpleHome} alt="goto home" class="icon-img" />
             <p class="icon-text">Home</p>
+          </a>
+        </li>
+
+        {/* about me */}
+        <li class="icon">
+          <a href="#about-me" class="icon-link">
+            <img src={purpleHome} alt={"name"} class="icon-img" />
+            <p class="icon-text">About</p>
           </a>
         </li>
 
@@ -24,14 +46,11 @@ const Navbar: Component = () => {
           </a>
         </li>
 
-        {/* email */}
+        {/* contact me */}
         <li class="icon">
-          <a
-            href="mailto:adan.more70@gmail.com?subject=I%20found%20your%20portfolio%20to%20be%20pretty%20interesting%2C%20would%20you%20like%20to%20schedule%20a%20call%3F"
-            class="icon-link"
-          >
-            <img src={emailSvg} alt={"name"} class="icon-img" />
-            <p class="icon-text">Email</p>
+          <a href="#contact-me" class="icon-link">
+            <img src={purpleHome} alt={"name"} class="icon-img" />
+            <p class="icon-text">Contact</p>
           </a>
         </li>
       </ul>
