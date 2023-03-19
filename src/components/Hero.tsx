@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 import "../styles/hero.scss";
 import { Motion } from "@motionone/solid";
-import Button from "./atoms/Button";
+import GlowButton from "./atoms/GlowButton";
 
 const Hero: Component = () => {
   return (
@@ -25,15 +25,24 @@ const Hero: Component = () => {
           <p class="charge">Web Dev</p>
         </div>
 
-        <div class="likes">I like to build cool apps that have a purpose</div>
+        <article class="likes">
+          <p class="blue-gradient">
+            I'm Mexican and currently doing a hackaton, learning more about
+            Next13 & Go.
+          </p>
+          <p class="blue-gradient">
+            I like building highly perfomant applications in react, and I have
+            an special interest for fast-paced work enviroments
+          </p>
+        </article>
 
         <div class="buttons">
-          <Button
+          <GlowButton
             text="LinkedIn"
             url="https://www.linkedin.com/in/adan-moreno7/"
             isExternal={false}
           />
-          <Button
+          <GlowButton
             text="Github"
             url="https://github.com/hachikoi-the-creator"
             isExternal={false}

@@ -5,8 +5,10 @@ $container-bg: rgba(221, 160, 221, 0.2);
 .about-me {
   width: 85%;
   margin: 0 auto;
-  // background-color: $container-bg;
-  // border-radius: 1rem;
+
+  background-color: $container-bg;
+  border-radius: 1rem;
+  border: 1px solid lighten($color: $container-bg, $amount: 0.7);
 
   .gradient-subtitle {
     margin-bottom: 2rem;

@@ -17,7 +17,7 @@ export default function AboutMe() {
   };
 
   return (
-    <section class="about-me glassy p-top">
+    <section class="about-me p-top">
       <h2 class="gradient-subtitle">About Me</h2>
       <div class="content ">
         <p use:intersectionObserver={handleObserver} class="fade-in">
