@@ -54,11 +54,15 @@ a {
 }
 
 .gradient-subtitle {
+  @media (min-width: 600px) {
+    font-size: 4rem;
+  }
+
   position: relative;
   text-align: center;
   font-weight: 700;
   padding: 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
 
   background-image: linear-gradient(90deg, $gradient-intro1, $gradient-intro2);
