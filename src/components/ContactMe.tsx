@@ -1,3 +1,4 @@
+import "../styles/contactMe.scss";
 import { Component } from "solid-js";
 import emailSvg from "../assets/white-email.svg";
 

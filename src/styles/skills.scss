@@ -1,0 +1,36 @@
+.skills {
+  overflow-y: hidden;
+  width: 80%;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+
+  .tech-stack--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .img-container {
+    width: 6rem;
+    height: 6rem;
+    background-color: rgba(0, 25, 134, 0.288);
+    border-radius: 68% 32% 80% 20% / 30% 53% 47% 70%;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      scale: 1.3;
+      background-color: rgba(0, 25, 134, 0.488);
+      padding: 3px;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}

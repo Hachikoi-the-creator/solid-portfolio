@@ -5,6 +5,7 @@ import AboutMe from "./components/AboutMe";
 import ProjectsContainer from "./components/ProjectsContainer";
 import TestSnow from "./components/TestSnow";
 import ContactMe from "./components/ContactMe";
+import Skills from "./components/Skills";
 
 const App: Component = () => {
   return (
@@ -14,6 +15,7 @@ const App: Component = () => {
       <Hero />
       <AboutMe />
       <ProjectsContainer />
+      <Skills />
       {/* <ContactMe /> */}
     </>
   );
