@@ -8,14 +8,14 @@ const Skills: Component = () => {
     <section class="skills" id="skills">
       <h2 class="gradient-subtitle">Tech Stack</h2>
       <article>
-        <h3>I used the most</h3>
+        <h3 class="blue-gradient">I use the most</h3>
         <div class="tech-stack--wrapper">
           <MostUsedSkills />
         </div>
       </article>
 
       <article class="tech-stack">
-        <h3>I have used</h3>
+        <h3 class="blue-gradient">I have used</h3>
         <div class="tech-stack--wrapper">
           <KnownTools />
         </div>

@@ -24,3 +24,6 @@ https://calendly.com/adan-8koi/me-with-me
 # Credits
 
 [Burger](https://codepen.io/maximakymenko/pen/aboWJpX/?editors=0010)
+[form example](https://dev.to/csarnataro/how-to-submit-a-form-with-solid-js-286d)
+[send email help, but not accurate](https://medium.com/@eesh.t/send-email-using-emailjs-and-react-form-9993bb6929d8)
+[env](https://github.com/solidjs/solid/issues/292)
