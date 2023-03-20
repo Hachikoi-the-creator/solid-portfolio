@@ -14,6 +14,7 @@ const ContactMe: Component = () => {
   const [name, setName] = createSignal("");
   const [msg, setMsg] = createSignal("");
   const [email, setEmail] = createSignal("");
+  const [sending, setSending] = createSignal(false);
 
   const resetInputs = () => {
     setName("");
@@ -30,15 +31,26 @@ const ContactMe: Component = () => {
     return validName && validEmail && validMsg;
   };
 
+  // check in local storage the counter of how many messages have been sent
+  // todo: update it to  take into account the time
+  const checkForTrouble = () => {
+    const prevValue = +(window.localStorage.getItem("sent-times") || "1");
+    window.localStorage.setItem("sent-times", (prevValue + 1).toString());
+    return prevValue >= 3;
+  };
+
   const handleSubmit = (event: FormSubmit) => {
     event.preventDefault();
-    if (!verifyInputs) return window.alert("Not valid inputs");
+    if (!verifyInputs()) return window.alert("Not valid inputs");
+    if (checkForTrouble()) return window.alert("Please dont send spam :c");
 
+    setSending(true);
     const templateParams = {
       from_email: email(),
-      subject: `check me out :D - by: ${name}`,
+      subject: `check me out :D - by: ${name()}`,
       message: msg(),
     };
+    console.log(templateParams);
 
     // emailjs.send(serviceID, templateID, templateParams, publicKey);
     emailjs
@@ -48,7 +60,10 @@ const ContactMe: Component = () => {
         templateParams,
         import.meta.env.VITE_EMAIL_KEY
       )
-      .then((res) => resetInputs())
+      .then((res) => {
+        resetInputs();
+        setSending(false);
+      })
       .catch((e) => console.error("mistakes have ben made", e));
   };
 
@@ -62,34 +77,39 @@ const ContactMe: Component = () => {
 
       <article>
         <h3 class="blue-gradient">Email me</h3>
-        <form onsubmit={handleSubmit}>
-          <label>
-            Name:
+        <form onsubmit={handleSubmit} class="contact-form">
+          <div class="input-container">
+            <label for="name">Name:</label>
             <input
+              id="name"
               type="text"
-              placeholder="Enter your name"
               onchange={(e) => setName(e.currentTarget.value)}
               value={name()}
             />
-          </label>
-          <label>
-            Email:
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
             <input
+              id="email"
               type="text"
-              placeholder="Enter your email"
               onchange={(e) => setEmail(e.currentTarget.value)}
               value={email()}
             />
-          </label>
-          <label>
-            Message:
+          </div>
+
+          <div class="input-container">
+            <label for="msg">Message:</label>
             <textarea
-              placeholder="Enter a message"
+              id="msg"
               onchange={(e) => setMsg(e.currentTarget.value)}
               value={msg()}
             />
-          </label>
-          <button>Send</button>
+          </div>
+
+          <button class="neon-button" disabled={sending()}>
+            Send
+          </button>
         </form>
       </article>
     </section>

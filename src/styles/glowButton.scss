@@ -19,6 +19,20 @@ $text-hover: #232323;
   position: relative;
 }
 
+.neon-button:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &::before {
+    background-color: transparent;
+  }
+}
+
 .neon-button::before {
   pointer-events: none;
   content: "";

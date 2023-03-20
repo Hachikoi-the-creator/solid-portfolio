@@ -2,7 +2,8 @@
 
 .contact-me {
   width: 80%;
-  margin: 0 auto;
+  margin-inline: auto;
+  margin-block: 2rem;
 
   h3 {
     text-align: center;
@@ -37,5 +38,64 @@
 
   img {
     width: 2rem;
+  }
+
+  // -------------------------------------------- FORM --------------------------------------
+  .contact-form {
+    padding: 0 3rem;
+    &,
+    .input-container {
+      // border: solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    label {
+      margin: 1.3rem 0 0.5rem 1rem;
+      background: linear-gradient(45deg, #2c1f9d, #6e0763);
+      width: fit-content;
+      padding: 0 10px;
+      border-radius: 3px;
+      z-index: 1;
+    }
+
+    input,
+    textarea {
+      padding: 3px;
+      font-family: inherit;
+      background-color: rgba(240, 248, 255, 0.719);
+      border: 3px solid #6e0763;
+      border-radius: 3px;
+      position: relative;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #69c3ff;
+    }
+
+    textarea {
+      resize: none;
+      height: 6ch;
+    }
+
+    button {
+      margin: 2rem 3rem 4rem 3rem;
+      min-width: 10ch;
+      font-size: larger;
+      background-color: transparent;
+    }
+
+    textarea::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      // z-index: -1;
+      background-color: rgb(0, 153, 102);
+    }
   }
 }
