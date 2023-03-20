@@ -79,32 +79,35 @@ const ContactMe: Component = () => {
         <h3 class="blue-gradient">Email me</h3>
         <form onsubmit={handleSubmit} class="contact-form">
           <div class="input-container">
-            <label for="name">Name:</label>
             <input
               id="name"
               type="text"
               onchange={(e) => setName(e.currentTarget.value)}
               value={name()}
+              placeholder=" "
             />
+            <label for="name">Name:</label>
           </div>
 
           <div class="input-container">
-            <label for="email">Email:</label>
             <input
               id="email"
               type="text"
               onchange={(e) => setEmail(e.currentTarget.value)}
               value={email()}
+              placeholder=" "
             />
+            <label for="email">Email:</label>
           </div>
 
           <div class="input-container">
-            <label for="msg">Message:</label>
             <textarea
               id="msg"
               onchange={(e) => setMsg(e.currentTarget.value)}
               value={msg()}
+              placeholder=" "
             />
+            <label for="msg">Message:</label>
           </div>
 
           <button class="neon-button" disabled={sending()}>

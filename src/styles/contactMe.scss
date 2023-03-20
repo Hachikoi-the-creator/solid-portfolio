@@ -45,10 +45,13 @@
     padding: 0 3rem;
     &,
     .input-container {
-      // border: solid;
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+
+    .input-container {
+      flex-direction: column-reverse;
     }
 
     label {
@@ -62,12 +65,26 @@
 
     input,
     textarea {
-      padding: 3px;
+      padding: 0.4rem 3px;
       font-family: inherit;
       background-color: rgba(240, 248, 255, 0.719);
       border: 3px solid #6e0763;
       border-radius: 3px;
-      position: relative;
+    }
+
+    input + label,
+    textarea + label {
+      transition: transform 300ms ease-in-out;
+      transform: translateY(4ch);
+    }
+
+    input:hover + label,
+    textarea:hover + label,
+    textarea:focus + label,
+    input:focus + label,
+    input:not(:placeholder-shown) + label,
+    textarea:not(:placeholder-shown) + label {
+      transform: translateY(0);
     }
 
     input:focus,
@@ -96,6 +113,61 @@
       bottom: 0;
       // z-index: -1;
       background-color: rgb(0, 153, 102);
+    }
+  }
+}
+
+.input-wrapper {
+  // margin-bottom: 2rem;
+
+  .label {
+    position: relative;
+
+    &__span {
+      background-color: transparent;
+      border-radius: var(--normal-radius);
+      position: absolute;
+      left: 3px;
+      top: -8%;
+      padding: calc(0.5rem * 0.75) calc(0.5rem * 0.5);
+      margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
+      white-space: nowrap;
+      transform: translate(0, 0);
+      transform-origin: 0 0;
+      transition: transform 120ms ease-in;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    /* error handling */
+    &__field.invalid-input {
+      border: 3px solid red;
+      background-color: #ff000087;
+    }
+
+    &__field {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border: 3px solid #85ff5bab;
+      padding: calc(0.5rem * 1.5) 0.5rem;
+      color: currentColor;
+      background: transparent;
+      border-radius: var(--normal-radius);
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        & + .label__span {
+          background: linear-gradient(
+            30deg,
+            rgba(140, 0, 255, 0.9),
+            rgba(0, 15, 131, 0.9)
+          );
+          /* transform: translateY(13px); */
+          transform: translate(0.5rem, -90%) scale(0.9);
+          color: #4aff50;
+        }
+      }
     }
   }
 }
