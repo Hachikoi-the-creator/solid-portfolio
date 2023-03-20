@@ -14,7 +14,7 @@ const App: Component = () => {
       <Hero />
       <AboutMe />
       <ProjectsContainer />
-      <ContactMe />
+      {/* <ContactMe /> */}
     </>
   );
 };

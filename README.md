@@ -21,8 +21,6 @@ https://calendly.com/adan-8koi/me-with-me
 #c7b9ff
 #f5d2b9
 
-# extra enry stuff I may look into later
+# Credits
 
-[interviews](https://rise.articulate.com/share/vDHEfwRWwQRF9Vl8dTWjjLFkiujlFgrp#/)
-[motivations job prep](https://rise.articulate.com/share/zASUqPyOEQzdzxZOq-hqf8knMerOsz2b#/)
-https://youtu.be/fea7P9dZsEA
+[Burger](https://codepen.io/maximakymenko/pen/aboWJpX/?editors=0010)

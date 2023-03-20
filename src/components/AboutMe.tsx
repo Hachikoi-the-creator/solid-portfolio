@@ -17,9 +17,9 @@ export default function AboutMe() {
   };
 
   return (
-    <section class="about-me p-top">
+    <section class="about-me p-top" id="about-me">
       <h2 class="gradient-subtitle">About Me</h2>
-      <div class="content ">
+      <div class="content">
         <p use:intersectionObserver={handleObserver} class="fade-in">
           I started my journey by teaching myself how to code with Python and
           fell in love with the joy of solving complex problems. That same
@@ -34,8 +34,16 @@ export default function AboutMe() {
           Manhwa, to non-fiction and self-help books, but lately the one thing
           I've been reading is documentation!I also love to challenge my own
           body; thus, I have tried Kapoeira and boxing, and I fell in love with
-          a videogame called PIU (pump it up)
-          {/* <Add link here> */}
+          a videogame called{" "}
+          <a target="_blank" href="https://youtu.be/au8KePT5-rM">
+            PIU{" "}
+          </a>
+          <a target="_blank" href="https://youtu.be/_CiMO9kWB34">
+            (pump{" "}
+          </a>
+          <a target="_blank" href="https://youtu.be/jUGQO9iVkCw">
+            it pu)
+          </a>
         </p>
       </div>
     </section>

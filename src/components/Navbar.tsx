@@ -32,7 +32,11 @@ const Navbar: Component = () => {
 
         {/* about me */}
         <li class="icon">
-          <a href="#about-me" class="icon-link">
+          <a
+            href="#about-me"
+            class="icon-link"
+            onclick={() => setIsBurgerOpen(false)}
+          >
             <img src={purpleHome} alt={"name"} class="icon-img" />
             <p class="icon-text">About</p>
           </a>
@@ -40,7 +44,11 @@ const Navbar: Component = () => {
 
         {/* projects */}
         <li class="icon">
-          <a href="#projects" class="icon-link">
+          <a
+            href="#projects"
+            class="icon-link"
+            onclick={() => setIsBurgerOpen(false)}
+          >
             <img src={laptopCode} alt={"name"} class="icon-img" />
             <p class="icon-text">Projects</p>
           </a>
@@ -48,7 +56,11 @@ const Navbar: Component = () => {
 
         {/* contact me */}
         <li class="icon">
-          <a href="#contact-me" class="icon-link">
+          <a
+            href="#contact-me"
+            class="icon-link"
+            onclick={() => setIsBurgerOpen(false)}
+          >
             <img src={purpleHome} alt={"name"} class="icon-img" />
             <p class="icon-text">Contact</p>
           </a>
