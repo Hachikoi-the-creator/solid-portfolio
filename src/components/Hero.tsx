@@ -1,18 +1,25 @@
 import { Component } from "solid-js";
+import { createViewportObserver } from "@solid-primitives/intersection-observer";
 import "../styles/hero.scss";
-import { Motion } from "@motionone/solid";
 import GlowButton from "./atoms/GlowButton";
 
 const Hero: Component = () => {
+  const [intersectionObserver] = createViewportObserver([], {
+    threshold: 0.5,
+  });
+
+  const handleObserver = (event: IntersectionObserverEntry) => {
+    if (event.isIntersecting) {
+      event.target.classList.remove("fade-in");
+      event.target.classList.add("appear");
+    }
+  };
+
   return (
-    <Motion.div
-      animate={{ opacity: [0, 1], scale: [0.3, 1] }}
-      transition={{
-        duration: 1,
-        easing: "ease-in-out",
-      }}
-      class="hero"
+    <div
+      class="hero fade-in"
       id="hero"
+      use:intersectionObserver={handleObserver}
     >
       <div class="inner-wrapper">
         <div class="opacity-container">
@@ -40,7 +47,7 @@ const Hero: Component = () => {
           <GlowButton text="Contact Me" url="#contact-me" isExternal={false} />
         </div>
       </div>
-    </Motion.div>
+    </div>
   );
 };
 

@@ -9,7 +9,7 @@ const Project: Component<ProjectT> = (props) => {
     props;
 
   const [intersectionObserver] = createViewportObserver([], {
-    threshold: 0.5,
+    threshold: 0,
   });
 
   const handleObserver = (event: IntersectionObserverEntry) => {
@@ -52,6 +52,7 @@ const Project: Component<ProjectT> = (props) => {
       <a
         use:intersectionObserver={handleObserver}
         href={liveLink}
+        target="_blank"
         class="thumbnail-wrapper fade-in"
       >
         <img src={imgUrl} alt={`preview of ${title}`} class="thumbnail" />

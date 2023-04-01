@@ -1,6 +1,18 @@
 @import "./variables.scss";
 
 .hero {
+  transition: all 0.7s ease-in-out;
+
+  &.fade-in {
+    color: transparent;
+    opacity: 0;
+  }
+
+  &.apear {
+    opacity: 1;
+    color: #000;
+  }
+
   @media (min-width: 600px) {
     margin-top: 3rem;
   }
