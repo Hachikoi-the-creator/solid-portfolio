@@ -1,5 +1,5 @@
 import cake from "../assets/img/cake.webp";
-import foodFull from "../assets/img/food-full.webp";
+import foodFull from "../assets/img/food-full.png";
 import rickPage from "../assets/img/rick-page.webp";
 import fituApp from "../assets/img/fitu.webp";
 
