@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import ProjectsContainer from "./components/ProjectsContainer";
-import TestSnow from "./components/TestSnow";
+// import TestSnow from "./components/TestSnow";
 import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
 
