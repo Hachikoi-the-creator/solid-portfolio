@@ -28,7 +28,7 @@ const Project: Component<ProjectT> = (props) => {
         <p class="desc">{desc}</p>
 
         <div class="tech-stack-ection">
-          <h5 class="stack-title">Stack used</h5>
+          <h4 class="stack-title">Stack used</h4>
           <ul class="tech-wrapper">
             <For each={techStack}>{(tool) => <li class="tool">{tool}</li>}</For>
           </ul>

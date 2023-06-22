@@ -11,6 +11,8 @@ const Navbar: Component = () => {
       <button
         class={`burger ${isBurgerOpen() ? "burger-open" : "burger-closed"}`}
         onClick={() => setIsBurgerOpen((prev) => !prev)}
+        aria-label="Toggle Menu"
+        aria-expanded={isBurgerOpen()}
       >
         <div />
         <div />
