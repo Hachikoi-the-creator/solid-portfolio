@@ -1,10 +1,26 @@
-import cake from "../assets/img/cake.webp";
-import foodFull from "../assets/img/food-full.png";
-import rickPage from "../assets/img/rick-page.webp";
-import fituApp from "../assets/img/fitu.webp";
+// Fit U
+import fitu300 from "../assets/img/fitu/fitu320.webp";
+import fitu600 from "../assets/img/fitu/fitu600.webp";
+import fitu1300 from "../assets/img/fitu/fitu1300.webp";
 
+// Cake
+import cake300 from "../assets/img/cake/cake300.webp";
+import cake600 from "../assets/img/cake/cake600.webp";
+import cake1300 from "../assets/img/cake/cake1200.webp";
+
+// Food Full stack
+import food300 from "../assets/img/food/food300.png";
+import food600 from "../assets/img/food/food600.png";
+import food1300 from "../assets/img/food/food1200.png";
+
+// rick & morty search
+import rick300 from "../assets/img/rick/rick300.webp";
+import rick600 from "../assets/img/rick/rick600.webp";
+import rick1300 from "../assets/img/rick/rick1200.webp";
+
+// T to avoid name class with component name
 export type ProjectT = {
-  imgUrl: string;
+  imgSrcSet: { 300: string; 600: string; 1300: string };
   title: string;
   desc: string;
   liveLink: string;
@@ -13,9 +29,9 @@ export type ProjectT = {
   rowReverse: boolean;
 };
 
-export default [
+const projectsData: ProjectT[] = [
   {
-    imgUrl: fituApp,
+    imgSrcSet: { "300": fitu300, "600": fitu600, "1300": fitu1300 },
     title: "Fit U",
     desc: "Makes you able to have a personalized training and eating plan or have the opportunity to have your group of trainees and give them daily training and eating plans from the comfort of our house",
     liveLink: "https://final-henry-g6.netlify.app/",
@@ -34,7 +50,7 @@ export default [
     rowReverse: false,
   },
   {
-    imgUrl: foodFull,
+    imgSrcSet: { "300": food300, "600": food600, "1300": food1300 },
     title: "Recipe Gallery",
     desc: "You can easily find the steps and ingredient list of the recipe you want to make you could also add your own recipe if it's not there already.",
     liveLink: "https://food-project-chi.vercel.app",
@@ -51,8 +67,8 @@ export default [
     rowReverse: true,
   },
   {
-    imgUrl: rickPage,
-    title: "Rick & Morty Chara Explorer",
+    imgSrcSet: { "300": rick300, "600": rick600, "1300": rick1300 },
+    title: "Rick & Morty Chara Explorefitur",
     desc: "Keep track of your favorite characters from the TV show Rick & Morty. add them to your favorites and know if they are still alive!",
     liveLink: "https://rick-morty-vite-react.vercel.app",
     codeLink: "https://github.com/Hachikoi-the-creator/Rick-Morty-vite-react",
@@ -60,7 +76,7 @@ export default [
     rowReverse: false,
   },
   {
-    imgUrl: cake,
+    imgSrcSet: { "300": cake300, "600": cake600, "1300": cake1300 },
     title: "Pastry Shop - ES",
     desc: "Here you can take a peak at the kind of work you can expect from this Baker, was a good experience to work with Jquery since I never heard of it, who would have thought I'd make my own version of Jquery later on... The project was a good experience about do's and dont's in freelancing.",
     liveLink: "https://pro-por.netlify.app",
@@ -69,3 +85,5 @@ export default [
     rowReverse: true,
   },
 ];
+
+export default projectsData;

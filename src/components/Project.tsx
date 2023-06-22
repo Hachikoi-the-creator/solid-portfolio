@@ -5,7 +5,7 @@ import { createViewportObserver } from "@solid-primitives/intersection-observer"
 import ProjectLink from "./atoms/ProjectLink";
 
 const Project: Component<ProjectT> = (props) => {
-  const { imgUrl, title, desc, liveLink, codeLink, techStack, rowReverse } =
+  const { imgSrcSet, title, desc, liveLink, codeLink, techStack, rowReverse } =
     props;
 
   const [intersectionObserver] = createViewportObserver([], {
@@ -55,7 +55,15 @@ const Project: Component<ProjectT> = (props) => {
         target="_blank"
         class="thumbnail-wrapper fade-in"
       >
-        <img src={imgUrl} alt={`preview of ${title}`} class="thumbnail" />
+        <img
+          srcSet={`${imgSrcSet[300]} 320w, ${imgSrcSet[600]} 640w, ${imgSrcSet[1300]} 1280w`}
+          sizes="(max-width: 380px) 320px,
+            (max-width: 680px) 640px,
+            1280px"
+          src={imgSrcSet[1300]}
+          alt="filling map"
+          class="thumbnail"
+        />
       </a>
     </article>
   );

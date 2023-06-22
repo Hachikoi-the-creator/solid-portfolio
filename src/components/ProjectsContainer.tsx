@@ -14,7 +14,7 @@ const ProjectsContainer: Component = () => {
           {(project) => (
             <Project
               title={project.title}
-              imgUrl={project.imgUrl}
+              imgSrcSet={project.imgSrcSet}
               desc={project.desc}
               liveLink={project.liveLink}
               codeLink={project.codeLink}
