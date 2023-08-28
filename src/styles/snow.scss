@@ -1,11 +1,11 @@
-$bubble-one: rgba(255, 197, 197, 4);
-$bubble-one-trans: rgba(255, 197, 197, 2);
+$bubble-one: rgba(255, 197, 197, .4);
+$bubble-one-trans: rgba(255, 197, 197, .2);
 
-$bubble-tree: rgba(187, 255, 187, 4);
-$bubble-tree-trans: rgba(187, 255, 187, 3);
+$bubble-tree: rgba(187, 255, 187, .4);
+$bubble-tree-trans: rgba(187, 255, 187, .3);
 
-$bubble-two: rgba(191, 191, 255, 4);
-$bubble-two-trans: rgba(191, 191, 255, 2);
+$bubble-two: rgba(191, 191, 255, .4);
+$bubble-two-trans: rgba(191, 191, 255, .2);
 
 .container {
   position: fixed;
