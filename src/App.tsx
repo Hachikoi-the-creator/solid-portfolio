@@ -10,6 +10,7 @@ import TestInput from "./components/TestInput";
 
 const App: Component = () => {
   return (
+    // just some randomcomment in hopes the de[;py wioll trigegr god fucking dammit]
     <>
       <Navbar />
       {/* <TestInput /> */}
