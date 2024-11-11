@@ -4,12 +4,8 @@
         "source": "/",
         "destination": "https://www.ruby-dev.xyz/",
         "permanent": true
-      },
-      {
-        "source": "/*",
-        "destination": "https://www.ruby-dev.xyz/",
-        "permanent": true
       }
+      
     ]
   }
   
